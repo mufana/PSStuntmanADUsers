@@ -1,2 +1,3 @@
-# ActiveDirectory
-Create demo users in Active Directory
+# PSStuntmanADUsers
+
+Creates Active Directory users and Organizational Units based on the data in the PSStuntman sqlite database. 
