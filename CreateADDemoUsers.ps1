@@ -13,7 +13,7 @@ try {
     $createdOrgUnitPath = Get-ADOrganizationalUnit -Filter ({name -eq $companyOrgUnitName})
     New-ADOrganizationalUnit -Name 'Users' -Path $createdOrgUnitPath.DistinguishedName -ProtectedFromAccidentalDeletion $false
 
-    $password = ConvertTo-SecureString -String "DemoCompany123!!" -AsPlainText -Force
+    $password = ConvertTo-SecureString -String "$($companyOrgUnitName)123!!" -AsPlainText -Force
     foreach ($user in $users){
         $splatNewADUser = @{
             Name = $user.ExternalId
